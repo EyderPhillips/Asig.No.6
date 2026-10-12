@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción al Desarrollo Web</title>
+</head>
+
+<body>
+
+    <!-- ===================================================== -->
+    <!-- 1. ENCABEZADO Y PRESENTACIÓN                          -->
+    <!-- ===================================================== -->
+    <header id="inicio">
+        <h1>Universidad Tecnológica de Panamá</h1>
+        
+        <h2>Introducción al Desarrollo Web</h2>
+
+        <p>
+            Bienvenido al curso de Introducción al Desarrollo Web. En este curso
+            aprenderás los conceptos básicos para crear sitios y aplicaciones que
+            funcionan en internet. Comenzaremos con HTML, el lenguaje que da
+            estructura a todas las páginas web, y conocerás cómo se organiza,
+            se publica y se visualiza un sitio en el navegador.
+        </p>
+
+        <!-- Menú con enlaces internos a las secciones de la página -->
+        <nav>
+            <a href="#contenido">Contenido</a> |
+            <a href="#multimedia">Multimedia</a> |
+            <a href="#enlaces">Enlaces</a> |
+            <a href="#formulario">Inscripción</a> |
+            <a href="#tabla">Tipos de páginas</a> |
+            <a href="seccion-dos/seccion-dos.html">Lenguajes y áreas del desarrollo web</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <!-- ===================================================== -->
+        <!-- 2. CONTENIDO EXPLICATIVO                              -->
+        <!-- ===================================================== -->
+        <section id="contenido">
+            <h1>Conceptos básicos del desarrollo web</h1>
+
+            <!-- Concepto 1: qué es una página web -->
+            <h2>¿Qué es una página web?</h2>
+            <p>
+                Una página web es un documento digital escrito principalmente en
+                HTML que se puede ver desde un navegador como Chrome, Firefox o
+                Edge. Puede contener texto, imágenes, videos, audio, enlaces y
+                formularios.
+                <br><br>
+                Un conjunto de páginas web relacionadas entre sí y alojadas bajo
+                una misma dirección forma un sitio web.
+                <br><br>
+                Cada página web tiene una dirección única llamada <strong>URL</strong>
+                (por ejemplo, https://www.utp.ac.pa), que funciona como la
+                dirección de una casa: le indica al navegador exactamente dónde
+                encontrar el documento que quiere mostrar. Esa dirección está
+                formada por un protocolo (http o https), un nombre de dominio y,
+                en ocasiones, la ruta de un archivo específico dentro del sitio.
+                <br><br>
+                El lenguaje base de toda página web es <strong>HTML</strong>
+                (HyperText Markup Language, o Lenguaje de Marcas de Hipertexto).
+                No es un lenguaje de programación, sino un lenguaje de marcado:
+                usa etiquetas para indicarle al navegador qué es cada parte del
+                contenido, por ejemplo un título, un párrafo, una imagen o un
+                enlace. Normalmente se complementa con CSS, que se encarga del
+                diseño y los colores, y con JavaScript, que agrega
+                interactividad.
+                <br><br>
+                Lo que hace especial a la web es el <strong>hipertexto</strong>:
+                los enlaces permiten saltar de una página a otra, o de una
+                sección a otra, con un solo clic. Gracias a esto, millones de
+                documentos en todo el mundo quedan conectados entre sí.
+            </p>
+
+            <!-- Concepto 2: cómo funcionan -->
+            <h2>¿Cómo funcionan las páginas web?</h2>
+            <p>
+                Las páginas web funcionan mediante un modelo cliente-servidor.
+                El cliente es el navegador del usuario y el servidor es la
+                computadora donde está guardado el sitio.
+                <br><br>
+                El <strong>cliente</strong> es quien pide información: puede ser
+                una computadora, un celular o una tableta con un navegador
+                instalado. El <strong>servidor</strong> es una computadora
+                conectada a internet las 24 horas, cuyo trabajo es almacenar los
+                archivos del sitio y entregarlos cada vez que un cliente los
+                solicita. La comunicación entre ambos se realiza mediante un
+                protocolo llamado <strong>HTTP</strong> (o HTTPS cuando la
+                conexión va cifrada y es más segura).
+            </p>
+
+            <!-- Imagen que ilustra el modelo cliente-servidor (carpeta imagenes) -->
+            <img src="imagenes/Que-es-un-servidor-y-porque-debes.webp"
+                 alt="Desarrollo web cliente-servidor"
+                 width="500">
+            <br><br>
+
+            <h3>Proceso básico</h3>
+            <!-- Lista ordenada: el navegador numera cada paso automáticamente -->
+            <ol>
+                <li>
+                    El usuario escribe una dirección (URL) en el navegador.
+                    También puede llegar a ella haciendo clic en un enlace o
+                    usando un buscador como Google.
+                </li>
+                <li>
+                    El navegador envía una solicitud al servidor. Antes, un
+                    sistema llamado DNS traduce el nombre del sitio (como
+                    utp.ac.pa) a la dirección numérica (dirección IP) del
+                    servidor que lo aloja.
+                </li>
+                <li>
+                    El servidor responde enviando los archivos de la página.
+                    Estos pueden ser el documento HTML, las imágenes, los
+                    videos, los audios y otros recursos que el sitio necesite.
+                </li>
+                <li>
+                    El navegador interpreta el código y muestra la página. Lee
+                    el HTML de arriba hacia abajo, solicita los recursos que
+                    faltan y arma la página visual que ve el usuario.
+                </li>
+            </ol>
+
+            <!-- Concepto 3: tipos de páginas -->
+            <h2>Tipos de páginas web</h2>
+            <p>
+                Según la forma en que se genera y se entrega su contenido, las
+                páginas web se clasifican principalmente en dos grandes tipos:
+                estáticas y dinámicas. Conocer la diferencia ayuda a decidir qué
+                tecnología usar al crear un sitio nuevo.
+            </p>
+
+            <h3>Páginas estáticas</h3>
+            <p>
+                Muestran siempre el mismo contenido a todos los usuarios. Están
+                hechas con HTML (y normalmente CSS) y solo cambian si el
+                desarrollador modifica los archivos. Son rápidas y sencillas de
+                publicar.
+                <br><br>
+                Como el servidor solo entrega archivos ya terminados, no
+                necesitan base de datos ni programación del lado del servidor.
+                Esto las hace más económicas de alojar, más seguras (hay menos
+                puntos por donde atacarlas) y muy veloces al cargar. Su
+                desventaja es que actualizarlas implica editar el código
+                directamente, y no permiten mostrar información personalizada
+                para cada visitante. Son ideales para portafolios, páginas de
+                presentación, folletos digitales o sitios informativos que casi
+                no cambian, como la página que estás construyendo en esta
+                asignación.
+            </p>
+
+            <h3>Páginas dinámicas</h3>
+            <p>
+                Cambian su contenido según el usuario, la hora o los datos
+                guardados en una base de datos. Requieren programación del lado
+                del servidor o del cliente. Un ejemplo son las redes sociales,
+                donde cada persona ve contenido distinto.
+                <br><br>
+                En estas páginas, el servidor no entrega un archivo fijo, sino
+                que <strong>genera la página en el momento</strong> en que el
+                usuario la solicita. Para lograrlo consulta una base de datos,
+                procesa la información con lenguajes como PHP, Python, Java o
+                JavaScript (Node.js) y arma el HTML final. Por eso pueden
+                mostrar el saldo de una cuenta, los productos de un carrito de
+                compras o las publicaciones de tus amigos. Su desarrollo es más
+                complejo y su mantenimiento más costoso que el de una página
+                estática, pero ofrecen mucha más flexibilidad e interacción.
+            </p>
+
+            <!-- Concepto 4: aplicación web vs sitio web -->
+            <h2>Diferencia entre una aplicación web y un sitio web</h2>
+            <p>
+                Aunque ambos se visitan desde el navegador y muchas veces se
+                confunden, tienen propósitos distintos. La diferencia principal
+                está en qué tanto participa el usuario: en un sitio web
+                normalmente consulta información, mientras que en una
+                aplicación web realiza acciones y trabaja con sus propios datos.
+            </p>
+
+            <h3>Sitio web</h3>
+            <p>
+                Su objetivo principal es informar. El usuario consulta contenido
+                pero casi no interactúa con él. Ejemplos: la página de una
+                universidad, un blog o un portafolio.
+                <br><br>
+                Su contenido suele ser el mismo para todos los visitantes y se
+                organiza en páginas con textos, imágenes y enlaces. No requiere
+                que el usuario inicie sesión para ver la información, y
+                normalmente su desarrollo es más sencillo y rápido. Los sitios
+                web también pueden ser dinámicos, por ejemplo un blog
+                administrado con un gestor de contenidos, pero su función
+                principal sigue siendo mostrar información.
+            </p>
+
+            <h3>Aplicación web</h3>
+            <p>
+                Su objetivo es que el usuario realice tareas e interactúe con
+                el sistema, por ejemplo iniciar sesión, enviar datos o procesar
+                información. Ejemplos: un correo electrónico en línea, un banco
+                en línea o un editor de documentos.
+                <br><br>
+                Funciona de forma parecida a un programa instalado en la
+                computadora, pero se usa directamente desde el navegador, sin
+                instalar nada. Casi siempre requiere una cuenta de usuario,
+                guarda información en una base de datos y responde a las
+                acciones de la persona en tiempo real. Por ejemplo, en un correo
+                en línea cada usuario ve sus propios mensajes y puede escribir,
+                enviar y organizar correos. Su desarrollo suele ser más
+                complejo, porque exige manejar usuarios, seguridad y datos.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- ===================================================== -->
+        <!-- 3. ELEMENTOS MULTIMEDIA                               -->
+        <!-- ===================================================== -->
+        <section id="multimedia">
+            <h1>Elementos multimedia</h1>
+
+            <h2>Imagen representativa</h2>
+            <img src="imagenes/desarrollo web.png"
+                 alt="Ilustración sobre desarrollo web"
+                 width="400">
+            <br><br>
+
+            <!-- Video de YouTube incrustado con iframe -->
+            <h2>Video sobre desarrollo web</h2>
+            <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/m86Bdh47IZM"
+                    title="Video sobre desarrollo web"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+            <br><br>
+
+            <!-- Audio breve en formato mp3 -->
+            <h2>Audio de bienvenida</h2>
+            <audio controls>
+                <source src="audio/que es el desarrollo web.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+
+        <hr>
+
+        <!-- ===================================================== -->
+        <!-- 4. ENLACES                                            -->
+        <!-- ===================================================== -->
+        <section id="enlaces">
+            <h1>Enlaces</h1>
+
+            <!-- Enlace interno (ancla) hacia otra sección de la misma página -->
+            <p>
+                <a href="#formulario">Ir al formulario de inscripción</a>
+            </p>
+
+            <!-- Enlace externo a un recurso -->
+            <p>
+                <a href="https://geoinnova.org/blog-territorio/introduccion-a-la-programacion-web-estructura-y-principales-lenguajes/?gad_source=1&gad_campaignid=1432387400&gbraid=0AAAAADNcCUyd36nfxUIswY8PXoEUmqVr1&gclid=EAIaIQobChMI0o_Ht9K0lwMVeR_UAR3juy4BEAAYASAAEgIR6vD_BwE"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Geoinnova.org: Introducción a la programación web
+                </a>
+            </p>
+
+            <!-- Enlace que abre el correo del profesor con mailto -->
+            <p>
+                <a href="mailto:alonso.gonzalez2@utp.ac.pa?subject=Consulta%20del%20curso%20de%20Desarrollo%20Web">
+                    Escribir al profesor
+                </a>
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- ===================================================== -->
+        <!-- 5. FORMULARIO DE INSCRIPCIÓN                          -->
+        <!-- ===================================================== -->
+        <section id="formulario">
+            <h1>Formulario de inscripción</h1>
+
+            <form action="#" method="post">
+
+                <!-- Campo de texto: nombre -->
+                <p>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre"
+                           placeholder="Escribe tu nombre" required>
+                </p>
+
+                <!-- Campo de texto: apellido -->
+                <p>
+                    <label for="apellido">Apellido:</label><br>
+                    <input type="text" id="apellido" name="apellido"
+                           placeholder="Escribe tu apellido" required>
+                </p>
+
+                <!-- Campo de contraseña -->
+                <p>
+                    <label for="clave">Contraseña:</label><br>
+                    <input type="password" id="clave" name="clave"
+                           placeholder="Crea una contraseña" required>
+                </p>
+
+                <!-- Campo de correo electrónico -->
+                <p>
+                    <label for="correo">Correo electrónico:</label><br>
+                    <input type="email" id="correo" name="correo"
+                           placeholder="ejemplo@correo.com" required>
+                </p>
+
+                <!-- Campo de fecha de nacimiento -->
+                <p>
+                    <label for="nacimiento">Fecha de nacimiento:</label><br>
+                    <input type="date" id="nacimiento" name="nacimiento" required>
+                </p>
+
+                <!-- Campo de cédula (formato panameño: 8-123-456) -->
+                <p>
+                    <label for="cedula">Cédula:</label><br>
+                    <input type="text" id="cedula" name="cedula"
+                           placeholder="Ej: 8-123-456" required>
+                </p>
+
+                <!-- Opciones de radio: modalidad -->
+                <p>
+                    Modalidad:<br>
+                    <input type="radio" id="presencial" name="modalidad"
+                           value="presencial" required>
+                    <label for="presencial">Presencial</label>
+
+                    <input type="radio" id="virtual" name="modalidad"
+                           value="virtual">
+                    <label for="virtual">Virtual</label>
+                </p>
+
+                <!-- Área de texto: comentarios -->
+                <p>
+                    <label for="comentarios">Comentarios:</label><br>
+                    <textarea id="comentarios" name="comentarios"
+                              rows="5" cols="40"
+                              placeholder="Escribe tus comentarios aquí"></textarea>
+                </p>
+
+                <!-- Botones de enviar y resetear -->
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpiar">
+                </p>
+
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- ===================================================== -->
+        <!-- 6. TABLA DE TIPOS DE PÁGINAS WEB                      -->
+        <!-- ===================================================== -->
+        <section id="tabla">
+            <h1>Tipos de páginas web</h1>
+
+            <table border="1" cellpadding="8" cellspacing="0">
+
+                <!-- Título de la tabla -->
+                <caption>Ejemplos de tipos de páginas web</caption>
+
+                <!-- Fila de encabezados -->
+                <thead>
+                    <tr>
+                        <th>Tipo de Página Web</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+
+                <!-- Filas de datos -->
+                <tbody>
+                    <tr>
+                        <td>Estática</td>
+                        <td>Contenido fijo que no cambia según el usuario.</td>
+                        <td>Página de presentación personal o portafolio</td>
+                    </tr>
+                    <tr>
+                        <td>Dinámica</td>
+                        <td>Contenido que cambia según los datos o el usuario.</td>
+                        <td>Facebook, Instagram</td>
+                    </tr>
+                    <tr>
+                        <td>Aplicación web</td>
+                        <td>Permite realizar tareas e interactuar con el sistema.</td>
+                        <td>Gmail, Google Docs</td>
+                    </tr>
+                    <tr>
+                        <td>Comercio electrónico</td>
+                        <td>Permite comprar y vender productos en línea.</td>
+                        <td>Amazon, Mercado Libre</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- PIE DE PÁGINA                                         -->
+    <!-- ===================================================== -->
+    <footer>
+        <p>
+            Universidad Tecnológica de Panamá - Introducción al Desarrollo Web<br>
+            <a href="#inicio">Volver al inicio de la página</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

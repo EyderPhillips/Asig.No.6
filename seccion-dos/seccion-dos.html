@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Codificación de caracteres para tildes y ñ -->
+    <meta charset="UTF-8">
+    <!-- Hace que la página se adapte a pantallas de celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguajes y áreas del desarrollo web - Universidad Tecnológica de Panamá</title>
+</head>
+
+<body>
+
+    <!-- ===================================================== -->
+    <!-- ENCABEZADO DE LA SECCIÓN DOS                          -->
+    <!-- ===================================================== -->
+    <header>
+        <h1>Universidad Tecnológica de Panamá</h1>
+        <h2>Lenguajes y áreas del desarrollo web</h2>
+        <p>
+            En esta sección conocerás los tres lenguajes fundamentales con los
+            que se construye la web y las dos grandes áreas en las que se divide
+            el trabajo de un desarrollador: el frontend y el backend.
+        </p>
+
+        <!-- Menú: enlaces internos de esta página y regreso a la principal -->
+        <nav>
+            <a href="#lenguajes">Lenguajes</a> |
+            <a href="#areas">Frontend y backend</a> |
+            <!-- ../ sube una carpeta para llegar al index.html -->
+            <a href="../index.html">Volver a la página principal</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <!-- ===================================================== -->
+        <!-- LENGUAJES DEL DESARROLLO WEB                          -->
+        <!-- ===================================================== -->
+        <section id="lenguajes">
+            <h1>Lenguajes del desarrollo web</h1>
+            <p>
+                Una página web se construye combinando tres tecnologías. Una
+                forma sencilla de entenderlas es compararlas con una casa:
+                HTML son las paredes y la estructura, CSS es la pintura y la
+                decoración, y JavaScript es la electricidad que hace que las
+                cosas funcionen.
+            </p>
+
+            <!-- Lenguaje 1: HTML -->
+            <h2>HTML: la estructura</h2>
+            <p>
+                HTML (HyperText Markup Language) es el lenguaje que define el
+                contenido de la página: títulos, párrafos, imágenes, enlaces,
+                tablas y formularios. No es un lenguaje de programación, sino
+                de marcado, porque utiliza etiquetas para indicarle al
+                navegador qué es cada elemento.
+                <br><br>
+                Cada etiqueta se escribe entre signos de menor y mayor que, y
+                normalmente tiene una apertura y un cierre. Por ejemplo:
+            </p>
+            <!-- pre y code muestran el texto tal cual, sin ejecutarlo -->
+            <pre><blockquote><strong><code>&lt;h1&gt;Hola, mundo&lt;/h1&gt; &lt;p&gt;Este es mi primer párrafo.&lt;/p&gt;</code></strong></blockquote></pre>
+
+            <!-- Lenguaje 2: CSS -->
+            <h2>CSS: el diseño</h2>
+            <p>
+                CSS (Cascading Style Sheets, u Hojas de Estilo en Cascada) es
+                el lenguaje que controla la apariencia de la página: colores,
+                tipos de letra, tamaños, márgenes y la forma en que se
+                distribuyen los elementos en la pantalla.
+                <br><br>
+                Gracias a CSS se puede cambiar todo el diseño de un sitio sin
+                modificar su contenido. Un ejemplo de cómo luce una regla de
+                CSS:
+            </p>
+
+            <pre><blockquote><strong><code>h1 {
+        color: blue;
+        font-size: 32px;
+        }</code></strong></blockquote></pre>
+
+            <p>
+                Esta regla le indica al navegador que todos los títulos
+                principales se muestren en color azul y con tamaño de 32
+                píxeles.
+            </p>
+
+            <!-- Lenguaje 3: JavaScript -->
+            <h2>JavaScript: la interactividad</h2>
+            <p>
+                JavaScript es un lenguaje de programación que permite que la
+                página responda a las acciones del usuario. Con él se pueden
+                crear menús desplegables, validar formularios, mostrar
+                mensajes, hacer animaciones y actualizar información sin
+                recargar la página.
+                <br><br>
+                Un ejemplo sencillo:
+            </p>
+
+            <pre><blockquote><strong><code>alert("¡Bienvenido al curso!");</code></strong></blockquote></pre>
+
+            <p>
+                Esta instrucción haría aparecer una ventana emergente con el
+                mensaje de bienvenida. En esta asignación no se utiliza
+                JavaScript, ya que el trabajo se realiza únicamente con HTML,
+                pero es el siguiente paso natural en el aprendizaje del
+                desarrollo web.
+            </p>
+
+            <!-- Resumen de los tres lenguajes en una lista -->
+            <h3>Resumen</h3>
+            <ul>
+                <li><strong>HTML:</strong> define qué contenido tiene la página.</li>
+                <li><strong>CSS:</strong> define cómo se ve ese contenido.</li>
+                <li><strong>JavaScript:</strong> define cómo se comporta e interactúa.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- ===================================================== -->
+        <!-- ÁREAS: FRONTEND Y BACKEND                             -->
+        <!-- ===================================================== -->
+        <section id="areas">
+            <h1>Áreas del desarrollo web: frontend y backend</h1>
+            <p>
+                El desarrollo web se divide en dos grandes áreas que trabajan
+                juntas. Una se encarga de lo que el usuario ve y toca, y la
+                otra de lo que ocurre por detrás, en el servidor.
+            </p>
+
+            <!-- Imagen de apoyo (carpeta imagenes, un nivel arriba con ../) -->
+            <img src="../imagenes/frontend, backend y base de datos.png"
+                 alt="Diagrama que muestra el frontend como la parte visible y el backend como el servidor y la base de datos"
+                 width="500">
+
+            <!-- Frontend -->
+            <h2>Frontend: lo que el usuario ve</h2>
+            <p>
+                El frontend es la parte de la página con la que el usuario
+                interactúa directamente en su navegador: los botones, los
+                menús, los textos, las imágenes y los formularios. Los
+                desarrolladores frontend se encargan de que el sitio se vea
+                bien, sea fácil de usar y funcione correctamente en
+                computadoras, tabletas y celulares.
+            </p>
+            <h3>Tecnologías del frontend</h3>
+            <p>
+                Las tecnologías base son HTML, CSS y JavaScript. Además, se
+                suelen usar herramientas adicionales llamadas frameworks, como
+                React, Angular o Vue, que ayudan a construir interfaces más
+                complejas de forma ordenada.
+            </p>
+
+            <!-- Backend -->
+            <h2>Backend: lo que ocurre detrás</h2>
+            <p>
+                El backend es la parte que el usuario no ve. Funciona en el
+                servidor y se encarga de procesar la información, guardar y
+                consultar datos en una base de datos, validar usuarios y
+                aplicar las reglas del sistema.
+                <br><br>
+                Por ejemplo, cuando inicias sesión en una página, el frontend
+                muestra el formulario, pero es el backend el que comprueba si
+                tu usuario y contraseña son correctos.
+            </p>
+            <h3>Tecnologías del backend</h3>
+            <p>
+                Se usan lenguajes como PHP, Python, Java, C# o JavaScript (con
+                Node.js), junto con bases de datos como MySQL, PostgreSQL o
+                MongoDB, donde se almacena la información.
+            </p>
+
+            <!-- Desarrollador full stack -->
+            <h2>Desarrollador full stack</h2>
+            <p>
+                Se le llama desarrollador full stack a la persona que domina
+                tanto el frontend como el backend y puede construir una
+                aplicación completa de principio a fin. Para llegar ahí, lo
+                más recomendable es empezar por lo básico: primero HTML,
+                después CSS y JavaScript, y más adelante el área del servidor.
+            </p>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- PIE DE PÁGINA                                         -->
+    <!-- ===================================================== -->
+    <footer>
+        <p>
+            Universidad Tecnológica de Panamá - Introducción al Desarrollo Web<br>
+            <a href="../index.html">Volver a la página principal</a> |
+            <a href="#lenguajes">Volver al inicio de la sección</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
